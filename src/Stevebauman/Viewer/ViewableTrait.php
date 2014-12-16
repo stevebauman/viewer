@@ -10,7 +10,6 @@ trait ViewableTrait {
     
     public function viewer()
     {
-        
         if (!$this->viewer || !class_exists($this->viewer)) {
             
             throw new ViewerException('Please set the $viewer property to your viewer path.');
@@ -24,7 +23,6 @@ trait ViewableTrait {
         }
         
         return $this->viewerInstance;
-        
     }
     
 }
