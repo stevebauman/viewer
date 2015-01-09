@@ -3,9 +3,9 @@
 namespace Stevebauman\Viewer;
 
 abstract class AbstractViewer {
-    
+
     protected $entity;
-    
+
     /**
      * @param $entity
      */
@@ -13,7 +13,7 @@ abstract class AbstractViewer {
     {
         $this->entity = $entity;
     }
-    
+
     /**
      * Allow for property-style retrieval
      *
@@ -22,12 +22,12 @@ abstract class AbstractViewer {
      */
     public function __get($property)
     {
-            if (method_exists($this, $property))
-            {
-                    return $this->{$property}();
-            }
-            
-            return $this->entity->{$property};
+        if (method_exists($this, $property))
+        {
+            return $this->{$property}();
+        }
+
+        return $this->entity->{$property};
     }
-    
+
 }
