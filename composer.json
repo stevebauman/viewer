@@ -21,7 +21,7 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "src/"
         ],
         "psr-0": {
             "Stevebauman\\Viewer\\": "src/"
