@@ -12,16 +12,6 @@ class ViewerServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->package('stevebauman/viewer');
-	}
-
-	/**
 	 * Register the service provider.
 	 *
 	 * @return void
@@ -38,7 +28,7 @@ class ViewerServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('viewer');
+		return ['viewer'];
 	}
 
 }

@@ -2,11 +2,21 @@
 
 namespace Stevebauman\Viewer;
 
-abstract class AbstractViewer {
-
+/**
+ * Class AbstractViewer
+ */
+abstract class AbstractViewer
+{
+    /**
+     * The viewers entity to retrieve information from.
+     *
+     * @var mixed
+     */
     protected $entity;
 
     /**
+     * Constructor.
+     *
      * @param $entity
      */
     function __construct($entity)
@@ -15,9 +25,10 @@ abstract class AbstractViewer {
     }
 
     /**
-     * Allow for property-style retrieval
+     * Allow for property-style retrieval.
      *
-     * @param $property
+     * @param int|string $property
+     *
      * @return mixed
      */
     public function __get($property)
@@ -29,5 +40,4 @@ abstract class AbstractViewer {
 
         return $this->entity->{$property};
     }
-
 }
