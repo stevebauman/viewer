@@ -23,21 +23,4 @@ abstract class AbstractViewer
     {
         $this->entity = $entity;
     }
-
-    /**
-     * Allow for property-style retrieval.
-     *
-     * @param int|string $property
-     *
-     * @return mixed
-     */
-    public function __get($property)
-    {
-        if (method_exists($this, $property))
-        {
-            return $this->{$property}();
-        }
-
-        return $this->entity->{$property};
-    }
 }
